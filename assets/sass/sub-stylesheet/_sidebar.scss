@@ -1,0 +1,222 @@
+.sidebar {
+	.widget {
+		@include border-radius(4px);
+		margin-bottom: 30px;
+		background-color: $white;
+		padding: 30px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+		.widget-title {
+			font-weight: 400;
+		}
+		&.search {
+			padding: 0;
+			form {
+				position: relative;
+				input {
+					padding: 17px 40px 17px 20px;
+					background-color: $white;
+					border: none;
+				}
+				.fa-search {
+					position: absolute;
+					right: 20px;
+					top: 50%;
+					margin-top: -9px;
+					font-size: $font-size-large;
+				}
+			}
+		}
+		&.catagories {
+			ul {
+				margin: 0;
+				padding: 0;
+				list-style: none;
+				li {
+					a {
+						padding: 10px 0;
+						display: block;
+						border-bottom: 1px dashed $border-color;
+						@include transition(0.3s);
+						&:hover {
+							padding-left: 20px;
+							color: $base-color;
+						}
+					}
+					&:last-child {
+						a {
+							border-bottom: none;
+						}
+					}
+				}
+			}
+		}
+		&.popular-post {
+			.small-post-list {
+				padding: 0;
+				margin: 0;
+				list-style: none;
+				>li {
+					padding: 12px 0;
+					border-bottom: 1px dashed $border-color;
+					.post-thumb {
+						margin-right: 10px;
+					}
+					a {
+						color: $heading-color;
+						font-weight: 400;
+						@include transition(0.3s);
+						&:hover {
+							color: $base-color;
+						}
+					}
+					.post-meta {
+						padding-bottom: 0;
+						li {
+							color: $descr-color;
+						}
+					}
+					&:last-child {
+						border-bottom: none;
+					}
+				}
+			}
+		}
+		&.tag {
+			.tag-list {
+				padding: 0;
+				left: 0;
+				list-style: none;
+				margin-left: -5px;
+				margin-right: -5px;
+				margin-top: 0;
+				margin-bottom: 0;
+				overflow: hidden;
+				li {
+					float: left;
+					a {
+						display: block;
+						padding: 9px 20px;
+						background-color: $border-color2;
+						margin: 5px;
+						@include transition(0.3s);
+						@include border-radius(1px);
+						&:hover {
+							background-color: $base-color;
+							color: $white;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+/* price range */
+.sidebar {
+	.price-range {
+		background-color: transparent;
+		.price-heading-title {
+		    font-size: 22px;
+		    line-height: 24px;
+		    font-weight: 700;
+		    color: #2f2f2f;
+		    margin-bottom: 20px;
+		    text-transform: uppercase;
+		}
+		.nstSlider {
+		    -webkit-border-radius: 1px;
+		    -moz-border-radius: 1px;
+		    border-radius: 10px;
+		    width: 100%;
+		    height: 12px;
+		    background: $white;
+		    border: 1px solid #e5e4e4;
+		    position: relative;
+		    margin-bottom: 20px;
+
+		    .bar {
+			    background: red;
+			    height: 100%;
+			    top: 3px;
+			}
+			.leftGrip {
+			    position: absolute;
+			    -webkit-border-radius: 1px;
+			    -moz-border-radius: 1px;
+			    border-radius: 1px;
+			    width: 18px;
+			    height: 18px;
+			    background: $white;
+			    border-radius: 100px;
+			    top: -4px;
+			    border: 2px solid $border-color;
+			}
+			.rightGrip {
+			    position: absolute;
+			    -webkit-border-radius: 1px;
+			    -moz-border-radius: 1px;
+			    border-radius: 1px;
+			    width: 18px;
+			    height: 18px;
+			    border-radius: 100px;
+			    background: $white;
+			    top: -4px;
+			    border: 2px solid $border-color;
+			}
+		}
+		.price-filter {
+			 .price-range-count {
+			 	p {
+				    font-size: 15px;
+				    font-weight: 700;
+				    color: #363636;
+				}
+			 }
+		}
+	}
+	.popular-product {
+		background-color: transparent;
+		padding: 0;
+		.widget-title {
+			margin-top: -6px;
+			margin-bottom: 30px;
+		}
+		.small-post-list {
+			list-style: none;
+			padding-left: 0;
+			.product-item {
+				background-color: transparent;
+				display: flex;
+				flex-wrap: wrap;
+				padding: 10px 0;
+				.product-thumb {
+					margin-right: 20px;
+					img {
+						width: auto;
+					}
+				}
+				.product-content {
+					text-align: left;
+					padding: 0;
+					.name {
+						font-size: 18px;
+						margin-top: 0;
+					}
+					.price {
+						font-size: $font-size-base;
+						color: $descr-color2;
+					}
+					.rating {
+						i {
+							color: $base-color;
+							&.color {
+								color: $descr-color2;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,68 @@
+$bootstrap-sass-asset-helper: false !default;
+//
+// Variables
+// --------------------------------------------------
+
+//== Colors
+$base-color: #e72f4b;
+$base-color-dark: #397df0;
+$section-bg: #f3f3f3;
+
+$white: #fff;
+
+$black: #0f0d0d;
+$black2: #252a31;
+$green: #2ecc71;
+$red: #e74c3c;
+$violet: #8e44ad;
+$blue-dark: #161743;
+
+
+$facebook: #3b5998;
+$twitter: #55acee;
+$linkedin: #007bb5;
+
+$heading-color: #332929;
+
+$descr-color: #717171;
+$descr-color2: #999;
+$descr-color3: #787d85;
+$descr-color4: #666;
+
+$separator-color: #e3e3e3;
+$section-bg-color: #eceff5;
+
+$border-color: #e0e0e0;
+$border-color2: #f3f3f3;
+$border-color3: #efefef;
+$border-color4: #dee1e8;
+
+$countdown-bg-color1: #d91231;
+$countdown-bg-color2: #fc4a21;
+$countdown-bg-color3: #fc7921;
+$countdown-bg-color4: #fbba3a;
+
+//== Typography
+$font-family-sans-serif:  'Roboto', sans-serif;
+$font-size-base:          15px !default;
+
+$font-size-large:         ceil(($font-size-base * 1.2)) !default; // ~18px
+$font-size-small:         ceil(($font-size-base * 0.865)) !default; // ~14px
+
+$font-size-h1:            floor(($font-size-base * 3.73)) !default; // ~56px
+$font-size-h2:            floor(($font-size-base * 3.1)) !default; // ~46px
+$font-size-h3:            ceil(($font-size-base * 2.4)) !default; // ~36px
+$font-size-h4:            ceil(($font-size-base * 2.1)) !default; // ~32px
+$font-size-h5:            ceil(($font-size-base * 1.6)) !default; // ~24px
+$font-size-h6:            ceil(($font-size-base * 1.46)) !default; // ~22px
+
+//** Unit-less `line-height` for use in components like buttons.
+$line-height-base:        1.6 !default; // 25/15
+
+// border-radius
+$border-radius-base:        4px !default;
+$border-radius-large:       6px !default;
+$border-radius-small:       3px !default;
+
+//  transition
+$transition: all 0.3s ease-in-out;

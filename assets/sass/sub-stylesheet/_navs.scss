@@ -1,0 +1,255 @@
+.navbar {
+	margin-bottom: 0;
+	&.full-width-nav {
+		padding-left: 30px;
+		padding-right: 30px;
+		text-align: center;
+		.nav {
+			float: none;
+			display: inline-block;
+		}
+	}
+	.nav {
+		margin: 6px 0;
+		li {
+			position: relative;
+			a {
+				padding: 35px 15px;
+				display: inline-block;
+				&:hover {
+					background-color: transparent;
+				}
+				&:active {
+					background-color: transparent;
+				}
+				&:focus {
+					background-color: transparent;
+				}
+			}
+			&.active, &:hover {
+				>a {
+					color: $base-color !important;
+					@include breakpoint(tablet){
+						background-color: $base-color;
+						color: $white !important;
+					}
+				}
+			}
+			@include breakpoint(mitablet){
+				.submenu {
+					position: absolute;
+					left: 0;
+					min-width: 200px;
+					top: 100%;
+					list-style: none;
+					padding-left: 0;
+					background-color: $white;
+					@include border-radius(3px);
+					border-top: 5px solid $base-color;
+					transform: scaleY(0);
+					transform-origin: 0 0 0;
+					@include transition(0.3s);
+					z-index: 2;
+					&:before {
+					    content: '';
+					    position: absolute;
+					    border-style: solid;
+					    border-width: 0 10px 10px;
+					    border-color: $base-color transparent;
+					    display: block;
+					    width: 0;
+					    z-index: 1;
+					    top: -14px;
+					    left: 15%;
+					}
+					li {
+						a {
+							padding: 12px 30px;
+							display: block;
+							@include transition(0.3s);
+							border-bottom: 1px solid $border-color2;
+						}
+						&:hover>a {
+							background-color: $descr-color;
+							color: $white !important;
+						}
+						.submenu {
+							left: 100%;
+							top: 0;
+							&:before {
+								display: none;
+							}
+						}
+						&.active-submenu, &:hover {
+							>a {
+								background-color: $base-color;
+								color: $white !important;
+							}
+						}
+						&:last-child {
+							a {
+								border-bottom: none;
+							}
+						}
+					}
+				}
+				&:hover {
+					>.submenu {
+						transform: scaleY(1);
+					}
+				}
+			}
+			@include breakpoint(tablet){
+				>a {
+					padding: 13px 20px;
+					margin-bottom: 2px;
+					color: $white;
+					width: 100%;
+				}
+				.submenu {
+					padding-left: 30px;
+					list-style: none;
+					width: 100%;
+					display: none;
+					li {
+						a {
+							padding: 10px 15px;
+							display: block;
+							color: $white !important;
+							background-color: transparent;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+.navbar-toggler {
+	color: $base-color;
+	outline: none !important;
+	border: 1px solid $base-color;
+	font-size: 28px;
+}
+
+.header.style-1 .logo, .header.style-1 .navbar .nav li a {
+	color: $white;
+}
+.header.style-1 .navbar .nav li .submenu li a {
+	color: $black;
+}
+.header.style-1 .navbar-toggler {
+	color: $white;
+	border-color: $white;
+}
+
+.transparent-menu {
+	.navbar-toggle {
+		.icon-bar {
+			background-color: $white;
+		}
+	}
+}
+.fixed-top-menu {
+	.navbar-toggle {
+		.icon-bar {
+			background-color: $white;
+		}
+	}
+	.navbar-toggler {
+		color: $white;
+		border: 1px solid $white;
+	}
+}
+
+.navbar-toggle {
+	@include breakpoint(tablet){
+		display: block;
+		margin-top: 36px;
+		margin-right: 0;
+		position: relative;
+		width: 35px;
+		.icon-bar {
+			position: absolute;
+			left: 0;
+			width: 100%;
+			height: 3px;
+			background-color: $heading-color;
+			margin: 0;
+			@include transition(0.3s);
+			&:first-child {
+				top: 7px;
+				transform: rotate(-45deg);
+			}
+			&:nth-child(2) {
+				opacity: 0;
+				margin: 0;
+			}
+			&:last-child {
+				transform: rotate(45deg);
+				top: 7px;
+				margin: 0;
+			}
+		}
+		&.collapsed {
+			.icon-bar {
+				transform-origin: center;
+				&:first-child {
+				top: 0;
+				transform: rotate(0deg);
+				}
+				&:nth-child(2) {
+					top: 7px;
+					opacity: 1;
+					margin: 0;
+				}
+				&:last-child {
+					transform: rotate(0deg);
+					top: 14px;
+					margin: 0;
+				}
+			}
+		}
+	}
+}
+
+.navbar-header {
+	@include breakpoint(tablet){
+		float: none;
+		margin: 0 !important;
+		padding: 0 30px;
+	}
+}
+.navbar-nav {
+	@include breakpoint(tablet) {
+		margin-left: -15px;
+		margin-right: -15px;
+		background-color: #161743;
+		float: none !important;
+		width: 100%;
+		padding-bottom: 100px;
+		&.nav {
+			margin-top: 15px;
+		}
+    	li {
+    		float: none;
+    	}
+    }
+}
+
+.navbar {
+	@include breakpoint(tablet){
+		.container {
+			width: 100%;
+			padding: 0;
+		}
+		.donate {
+			display: none;
+		}
+		.collapse {
+			max-height: 100vh;
+			&.show {
+				overflow-y: scroll !important;
+			}
+		}
+	}
+}

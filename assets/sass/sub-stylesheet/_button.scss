@@ -1,0 +1,40 @@
+.custom-btn {
+	padding: 10px 30px;
+	border: 2px solid $border-color;
+	font-size: $font-size-base;
+	border-radius: 30px;
+	position: relative;
+	overflow: hidden;
+	z-index: 1;
+	display: inline-block;
+	transition: 0.3s ease;
+	&:hover {
+		background-color: $base-color;
+		border-color: $base-color;
+		color: $white;
+		border-radius: 30px;
+		overflow: hidden;
+		box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+		transform: translateY(-3px);
+	}
+	&.pull-left {
+		float: none !important;
+	}
+	&.pull-right {
+		float: none !important;
+	}
+}
+.custom-btn-sm {
+	padding: 5px 20px;
+	&:hover {
+		background-color: rgba($base-color, 1);
+		border-color: rgba($base-color, 1);
+	}
+}
+.custom-btn-bg {
+	background-color: $white;
+	border-color: $white;
+	&:hover {
+		background-color: $base-color;
+	}
+}

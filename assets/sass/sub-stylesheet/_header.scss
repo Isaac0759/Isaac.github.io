@@ -1,0 +1,171 @@
+//  header one
+.header .donate {
+	float: right;
+	@include breakpoint(laptop-mini){
+		display: none;
+	}
+	&:active {
+		color: $white;
+	}
+	&:focus {
+		color: $white;
+	}
+	&:focus {
+		color: $white;
+	}
+}
+.header {
+	position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+	.header-top {
+		padding: 6px 25px;
+		background-color: $blue-dark;
+		overflow: hidden;
+		@include breakpoint(mobile_small){
+			display: none;
+		} 
+		.site-contact-info {
+			padding: 10px 0;
+			list-style: none;
+			margin-bottom: 0;
+			li {
+				float: left;
+				color: $white;
+				margin-right: 30px;
+				i {
+					margin-right: 6px;
+					color: $white;
+				}
+			}
+		}
+		.social-media {
+			margin-bottom: 0;
+			margin-top: 3px;
+		}
+	}
+	.navbar {
+		z-index: 99;
+		@include breakpoint(tablet){
+			padding: 15px 0;
+		}
+	}
+	.transparent-menu {
+		z-index: 9;
+		background-color: transparent;
+		.navbar-brand {
+			color: $white;
+		}
+		.navbar-nav {
+			li {
+				a {
+					color: $white;
+				}
+				.submenu {
+					li {
+						a {
+							color: $descr-color;
+						}
+					}
+				}
+				&.active {
+					a {
+						color: $base-color;
+					}
+				}
+				&:hover {
+					a {
+						color: $base-color;
+					}
+				}
+			}
+		}
+	}
+	&.fixed-top-menu {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 9;
+		background-color: $blue-dark;
+		.transparent-menu {
+			background-color: $blue-dark;
+		}
+		.navbar {
+			background-color: $blue-dark;
+		}
+		.header-top {
+			display: none;
+		}
+		.navbar-nav {
+			>li {
+				>a {
+					color: $white;
+				}
+			}
+		}
+		.donate {
+			background-color: $white;
+			color: $base-color;
+		}
+	}
+	.codexcoder-navbar {
+		.logo {
+			color: $base-color;
+			padding: 22px 0;
+		}
+	}
+	&.header-style2 {
+		.logo {
+			position: absolute;
+			left: 30px;
+			top: 50%;
+			margin-top: -25px;
+			padding: 0;
+		}
+		.navbar {
+			padding: 0;
+			border: none;
+		}
+		text-align: center;
+		.sd-box {
+			position: absolute;
+			right: 30px;
+			top: 50%;
+			margin-top: -22px;
+			.donate {
+				margin: 0;
+			}
+			.social-media {
+				margin: 4px 0 4px 25px;
+			}
+		}
+		.navbar-nav {
+			float: none;
+			display: inline-block;
+			margin: 0;
+			li {
+				a {
+					padding: 32px 15px;
+				}
+			}
+		}
+	}
+}
+.logo {
+	padding: 0;
+	&:nth-child(2) {
+		display: none;
+	}
+}
+.fixed-top-menu {
+	.logo {
+		&:nth-child(1) {
+			display: none;
+		}
+		&:nth-child(2) {
+			display: block;
+		}
+	}
+}

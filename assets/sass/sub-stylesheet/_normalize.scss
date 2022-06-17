@@ -1,0 +1,325 @@
+/*!
+Template Name: neta
+Template URI: https://themeforest.net/user/labartisan
+Author: labartisan.net
+Author URI: https://themeforest.net/user/labartisan
+Description: Neta Political & Election Campaign HTML Template
+Version: 1.0.0
+Text Domain: neta
+Tags: agency, campaign, candidate, debate, democracy, democrat, donation, election, election campaign, government, organization, political agency, political campaign, political candidate, republican
+
+*/
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Typography
+# Global CSS
+# Header CSS
+# Page Header
+# Banner
+	*Style-1
+	*Style-2
+	*Style-3
+	*Style-4
+	*Style51
+	*Style-6
+	*Style-7
+# about-sectio
+# about-sectio
+# about-section
+# about-bio
+# about-qoute
+# about-media
+# election-campaign-section
+# quick-donation-section
+# become-member-section
+# newsletter-section
+# footer-section
+# donate-details-area
+# donate-amount
+# payment-info
+# election-campaign
+# map-area
+# blog-content
+# entry-single
+# comments-list
+# ccr-section
+# comment-response
+# mission-section
+# campaign-schedule-lsit-area
+# polician-qoute-section
+# gallery-section
+# achievement-section
+# neta-info-section
+# biography-section
+# ourstatement
+# testimonial
+# join-us-section
+# urgent-causes-section
+# progress
+# achieve-goal
+# recent-causes-section
+# member
+# product-preview-section
+# Global Css
+# Button Css
+# Sidebar Css
+# Cart Page Css
+# Fore Zero Page
+--------------------------------------------------------------*/
+
+
+
+html {
+    font-family: $font-family-sans-serif;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+body {
+    font-family: $font-family-sans-serif;
+    font-size: $font-size-base;
+    margin: 0;
+    color: $descr-color;
+}
+// Typography
+h1 {
+    font-size: $font-size-h1;
+}
+h2 {
+    font-size: $font-size-h3;
+}
+h3 {
+    font-size: $font-size-h4;
+}
+h4 {
+    font-size: $font-size-h4;
+}
+h5 {
+    font-size: 20px;
+}
+h6 {
+    font-size: $font-size-h6;
+}
+@include breakpoint(miphablet){
+    h1 {
+        font-size: $font-size-h1;
+    }
+    h2 {
+        font-size: $font-size-h2;
+    }
+    h3 {
+        font-size: $font-size-h3;
+    }
+    h4 {
+        font-size: $font-size-h4;
+    }
+    h5 {
+        font-size: $font-size-h5;
+    }
+    h6 {
+        font-size: $font-size-h6;
+    }
+}
+h1, h2, h3, h4, h5, h6 {
+    color: $heading-color;
+    font-weight: 600;
+    font-family: $font-family-sans-serif;
+}
+h1>a, h2>a, h3>a, h4>a, h5>a, h6>a {
+    color: $heading-color;
+    font-weight: 600;
+}
+p {
+    font-size: $font-size-base;
+    margin: 0 0 1.75em;
+    color: $descr-color;
+    line-height: 1.6;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+a {
+    color: $descr-color;
+}
+a,a:hover,a:focus,a:active {
+    text-decoration: none;
+}
+a:hover,a:focus,a:active {
+    color: $base-color;
+}
+
+img {
+    max-width: 100%;
+}
+
+ 
+/**
+ * 4.0 - Forms
+ */
+ 
+input {
+    line-height: normal;
+}
+
+input[type="button"],
+input[type="button"][disabled]:hover,
+input[type="button"][disabled]:focus,
+input[type="reset"],
+input[type="reset"][disabled]:hover,
+input[type="reset"][disabled]:focus,
+input[type="submit"],
+input[type="submit"][disabled]:hover,
+input[type="submit"][disabled]:focus {
+    font-size: 1em;
+    display: inline-block;
+    padding: 10px 30px;
+    text-transform: uppercase;
+    font-weight: 700;
+    border: none;
+}
+input[type="button"]:hover,
+input[type="button"]:focus,
+input[type="reset"]:hover,
+input[type="reset"]:focus,
+input[type="submit"]:hover,
+input[type="submit"]:focus {
+    background: #00b2b7;
+}
+input[type="button"]:focus,
+input[type="reset"]:focus,
+input[type="submit"]:focus {
+    outline: thin dotted;
+    outline-offset: -4px;
+}
+ 
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="number"],
+textarea {
+    background: #f7f7f7;
+    background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
+    border: 1px solid #d1d1d1;
+    border-radius: 2px;
+    color: #686868;
+    padding: 0.625em 0.4375em;
+    width: 100%;
+}
+ 
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="number"]:focus,
+textarea:focus {
+    border-color: #007acc;
+    color: #1a1a1a;
+    outline: 0;
+}
+
+::-webkit-input-placeholder { 
+  color: #b0b0b0;
+}
+::-moz-placeholder { 
+  color: #b0b0b0;
+}
+:-ms-input-placeholder { 
+  color: #b0b0b0;
+}
+:-moz-placeholder { 
+  color: #b0b0b0;
+}
+ 
+.post-password-form {
+    margin-bottom: 1.75em;
+}
+ 
+.post-password-form label {
+    color: #686868;
+    display: block;
+    font-family: 'Dosis', sans-serif;
+    font-size: 13px;
+    font-size: 0.8125rem;
+    letter-spacing: 0.076923077em;
+    line-height: 1.6153846154;
+    margin-bottom: 1.75em;
+    text-transform: uppercase;
+}
+ 
+.post-password-form input[type="password"] {
+    margin-top: 0.4375em;
+}
+ 
+.post-password-form > :last-child {
+    margin-bottom: 0;
+}
+.alignleft {
+    float: left;
+}
+ 
+.alignright {
+    float: right;
+}
+ 
+.aligncenter {
+    clear: both;
+    display: block;
+    margin: 0 auto 1.75em;
+}
+ 
+blockquote.alignleft {
+    margin: 0.3157894737em 1.4736842105em 1.473684211em 0;
+}
+ 
+blockquote.alignright {
+    margin: 0.3157894737em 0 1.473684211em 1.4736842105em;
+}
+ 
+blockquote.aligncenter {
+    margin-bottom: 1.473684211em;
+}
+.clear:before,
+.clear:after,
+blockquote:before,
+blockquote:after,
+.entry-content:before,
+.entry-content:after,
+.entry-summary:before,
+.entry-summary:after,
+.comment-content:before,
+.comment-content:after,
+.site-content:before,
+.site-content:after,
+.site-main > article:before,
+.site-main > article:after,
+.primary-menu:before,
+.primary-menu:after,
+.social-links-menu:before,
+.social-links-menu:after,
+.textwidget:before,
+.textwidget:after,
+.content-bottom-widgets:before,
+.content-bottom-widgets:after {
+    content: "";
+    display: table;
+}
+ 
+.clear:after,
+blockquote:after,
+.entry-content:after,
+.entry-summary:after,
+.comment-content:after,
+.site-content:after,
+.site-main > article:after,
+.primary-menu:after,
+.social-links-menu:after,
+.textwidget:after,
+.content-bottom-widgets:after {
+    clear: both;
+}
